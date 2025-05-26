@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    margin: 0;
+}
+#sectionLeft{
+    width: 40%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#containerSectionLeft{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* text-align: center; */
+    gap: 20px;
+}
+#textosSL {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgb(232, 228, 228);
+    color: #2D84C6;
+}
+#comeceParagrafo{
+    font-weight: 700;
+    font-size: 40px;
+    width: 280px;
+    margin-bottom: 10px;
+}
+#cadastreParagrafo{
+    font-size: 20px;
+    width: 250px;
+    font-weight: 100;
+}
+#sectionRight {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#sectionRight{
+background-image: linear-gradient(to bottom, #329FD9, #329FD9, #204198);
+}
+
+#campoCadastro{
+    background-color: white;
+    border-radius: 50px;
+    height: 500px;
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#formSR{
+    width: 80%; /* ou 100%, se preferir */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;   
+    
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');

@@ -1,0 +1,23 @@
+DROP TABLE IF EXISTS `usuarios`;
+CREATE TABLE IF NOT EXISTS `usuarios` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `usuario` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `senha` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+INSERT INTO `usuarios` (`id`, `usuario`, `email`, `senha`) VALUES
+(1, 'antonio.mor', 'antonio.moreira144@aluno.ce.gov.br', '123456789'),
+(2, 'antonio.mor', 'antonio.moreira144@aluno.ce.gov.br', '123456789'),
+(3, 'dsds', 'antonio.moreira144@aluno.ce.gov.br', '123456789'),
+(4, 'dsds', 'antonio.moreira144@aluno.ce.gov.br', '$2y$10$TOBYhCe/2o2PnTGpbcRfj.NCxzEp1sKP4hMKJ7ksJ6/R5vz2gx23q'),
+(5, 'dudao', 'sim@nao', '$2y$10$f3xB8UcJpQphnuPXmwMroew0CFr0mWefCJabrSnu4URF4p/7zJHqq'),
+(6, '1', '1@1', '$2y$10$TNOj6gPffCdIz9x/xuTh7.6WI8AM4oLI2BHAyXsgo54/Xn6KskYna'),
+(7, 'dudu', 'sim@nao', '$2y$10$qz/wis4QhcpZYhCYWP4/FOaI0MiIli6sD8QmBWxJHITuk95DZ3mAe'),
+(8, 'dudu', 'sim@sim', '$2y$10$GW3LoEmyjr9hEeC5VyLsDOqY.g9ylHZTmBSwar4ns.XE8mx0rSfT2'),
+(9, 'luis', 'luis@luis', '$2y$10$6bqimj9nLBa/1/hyZmeLsutWLObyvS01v80GYZMVne1ickP94Cqzy'),
+(10, 'luis', 'luis@luis', '$2y$10$2/OBlU0flbO.z/Vo9m64Zu/Wi.n1fFlrjH1W.TEPTsecqEz.LDyGu');
+COMMIT;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

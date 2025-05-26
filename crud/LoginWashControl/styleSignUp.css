@@ -30,7 +30,6 @@ body{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background-color: rgb(232, 228, 228);
     color: #2D84C6;
 }
 #comeceParagrafo{
@@ -53,7 +52,7 @@ body{
 }
 
 #sectionRight{
-background-image: linear-gradient(to bottom, #329FD9, #329FD9, #204198);
+    background-image: linear-gradient(to bottom, #329FD9, #329FD9, #204198);
 }
 
 #cadastro{
@@ -78,15 +77,49 @@ background-image: linear-gradient(to bottom, #329FD9, #329FD9, #204198);
 }
 
 #criarBotao{
-    font-size: 30px
+    font-size: 30px;
+    font-weight: 500;
+    width: 200px;
+    background-color: #2D84C6;
+    color: white;
+}
+
+#tituloCadastro{
+    padding-bottom: 50px;
+    font-size: 80px;
+    color: #2D84C6;
+}
+
+#user, #email, #senha {
+    padding-left: 35px;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 
 .campoCadastro{
-    width: 80%;
+    width: 350px;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 100px;
     font-size: 16px;
+
+   
+}
+/* #user{
+    background-image: url(assets);
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+} */
+
+.iconsCadastro{
+    height: 25px;
+    position: absolute;
+    right: 750px;
+    opacity: 30%;
+}
+
+.camposEicons{
+    display: flex;
+    align-items: center;
 }

@@ -23,6 +23,20 @@
     <div id="sectionRight">  
         <div id="login">
             <h1 id="tituloLogin">Login</h1>
+            <div id="mensagemPhp">
+                <?php
+                    session_start();
+                    if (isset($_SESSION["camposVazios"])){
+                        echo $_SESSION["camposVazios"];
+                        session_destroy();
+                    } 
+                
+                    if (isset($_SESSION["camposErrados"])){
+                        echo $_SESSION["camposErrados"];
+                        session_destroy();
+                    }
+                ?>
+            </div>
             <form action="verify.php" method="post" id="formSR">
                 <div class="camposEicons">
                     <img src="assets/gmail.webp" alt="Ícone de email" class="iconsLogin">
@@ -32,25 +46,8 @@
                     <img src="assets/lock.png" alt="Ícone de senha" class="iconsLogin">
                     <input placeholder="Senha" type="password" name="senha" id="senha" class="campoLogin loginPadding">
                 </div>
-                <input type="submit" value="Entrar" class="campoLogin" id="criarBotao">
-                <?php
-                    session_start();
-                    if (isset($_SESSION["campoIncorreto"])){
-                        echo $_SESSION["campoIncorreto"];
-                        session_destroy();
-            
-                    }
-                    if (isset($_SESSION["senhaVazia"])){
-                        echo $_SESSION["senhaVazia"];
-                        session_destroy();
-            
-                    }
-                    if (isset($_SESSION["emailVazio"])){
-                        echo $_SESSION["emailVazio"];
-                        session_destroy();
-            
-                    }
-                ?>
+                <input type="submit" value="Entrar" class="campoLogin" id="entrarBotao">
+
             </form>
         </div>
     </div>

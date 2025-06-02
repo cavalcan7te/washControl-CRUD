@@ -59,7 +59,7 @@ body{
     background-color: white;
     border-radius: 50px;
     height: 500px;
-    width: 550px;
+    width: 495px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -94,6 +94,12 @@ body{
     padding-left: 35px;
 }
 
+#mensagemPhp {
+    color: red;
+    /* margin: 10px; */
+}
+
+
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 
 .campoCadastro{
@@ -122,4 +128,8 @@ body{
 .camposEicons{
     display: flex;
     align-items: center;
+}
+
+#criarBotao:hover{
+    background-color: #204198;
 }

@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include_once "connection.php";
     
     if (isset($_POST["user"]) && isset($_POST["email"]) && isset($_POST["senha"])) {
@@ -16,7 +17,8 @@
             header("Location: index.php");
             exit();
         } else {
-            echo "Preencha todos os campos.";
+            $_SESSION["campoVazio"] = "Preencha todos os campos.";
+            header("Location:signUp.php");
         }
     } else {
         header("Location: signUp.php");

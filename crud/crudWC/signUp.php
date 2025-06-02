@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=], initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <link rel="stylesheet" href="styleSignUp.css">
 </head>
@@ -25,6 +25,15 @@
        <div id="cadastro">
             <h1 id="tituloCadastro">Cadastro</h1>
             <form action="create.php" method="post" id="formSR">
+                <div id="mensagemPhp">
+                <?php
+                session_start();
+                 if (isset($_SESSION["campoVazio"])){
+                        echo $_SESSION["campoVazio"];
+                        session_destroy();
+                    }
+                ?>
+                </div>
                 <div class="camposEicons">
                     <img src="assets/profile.png" alt="" class="iconsCadastro">
                     <input placeholder="Nome de usuário" type="text" name="user" id="user" class="campoCadastro"   >
@@ -40,15 +49,6 @@
                 <input type="submit" value="Criar" class="campoCadastro" id="criarBotao">
             </form>
         </div>
-           
-
-        </form>  
-        </div>
-
-
-        
-
-
     </div>
 
 </body>

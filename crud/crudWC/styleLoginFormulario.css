@@ -59,7 +59,7 @@ body{
     background-color: white;
     border-radius: 50px;
     height: 500px;
-    width: 550px;
+    width: 495px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -83,12 +83,24 @@ body{
     gap: 20px;    
 }
 
-#criarBotao{
+#entrarBotao{
     font-size: 30px;
     font-weight: 500;
     width: 200px;
     background-color: #2D84C6;
     color: white;
+}
+
+#user{
+    background-image: url(assets);
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+}
+
+#mensagemPhp {
+    color: red;
+    margin: 10px;
 }
 
 
@@ -102,12 +114,7 @@ body{
     border-radius: 100px;
     font-size: 16px;
 }
-#user{
-    background-image: url(assets);
-    background-position: left center;
-    background-repeat: no-repeat;
-    padding-left: 40px;
-}
+
 
 .iconsLogin{
     height: 25px;
@@ -123,4 +130,8 @@ body{
 
 .loginPadding{
     padding-left: 35px;
+}
+
+#entrarBotao:hover{
+    background-color: #204198;
 }

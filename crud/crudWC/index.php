@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+    <title>Login</title>
     <link rel="stylesheet" href="styleLoginFormulario.css">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
 </head>
@@ -38,13 +38,21 @@
                 ?>
             </div>
             <form action="verify.php" method="post" id="formSR">
-                <div class="camposEicons">
-                    <img src="assets/gmail.webp" alt="Ícone de email" class="iconsLogin">
-                    <input placeholder="Email" type="email" name="email" id="email" class="campoLogin loginPadding">
+                <div class="campoComLabel">
+                    <label for="email">E-mail:</label>
+                    <div class="inputWrapper">
+                        <img src="assets/gmail.webp" alt="Ícone de email" class="iconsLogin">
+                        <input placeholder="Email" type="email" name="email" id="email" class="campoLogin loginPadding">
+                    </div>
                 </div>
-                <div class="camposEicons">
-                    <img src="assets/lock.png" alt="Ícone de senha" class="iconsLogin">
-                    <input placeholder="Senha" type="password" name="senha" id="senha" class="campoLogin loginPadding">
+
+
+                <div class="campoComLabel">
+                    <label for="senha">Senha:</label>
+                    <div class="inputWrapper">
+                        <img src="assets/lock.png" alt="Ícone de senha" class="iconsLogin">
+                        <input placeholder="Senha" type="password" name="senha" id="senha" class="campoLogin loginPadding">
+                    </div>
                 </div>
                 <input type="submit" value="Entrar" class="campoLogin" id="entrarBotao">
 

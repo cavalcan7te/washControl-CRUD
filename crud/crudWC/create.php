@@ -13,7 +13,6 @@
             $stmt->bindValue(":senha", $senha);
             $stmt->bindValue(":usuario", $user);
             $stmt->execute();
-
             header("Location: index.php");
             exit();
         } else {

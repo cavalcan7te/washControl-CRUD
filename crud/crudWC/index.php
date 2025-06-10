@@ -37,6 +37,7 @@
                     }
                 ?>
             </div>
+
             <form action="verify.php" method="post" id="formSR">
                 <div class="campoComLabel">
                     <label for="email">E-mail:</label>
@@ -48,15 +49,24 @@
 
 
                 <div class="campoComLabel">
+
                     <label for="senha">Senha:</label>
                     <div class="inputWrapper">
                         <img src="assets/lock.png" alt="Ícone de senha" class="iconsLogin">
                         <input placeholder="Senha" type="password" name="senha" id="senha" class="campoLogin loginPadding">
                     </div>
+                    
                 </div>
                 <input type="submit" value="Entrar" class="campoLogin" id="entrarBotao">
+                </form>
 
-            </form>
+            <div id="botaoHeader">
+                <p>Novo aqui?</p>
+                <form action="signUp.php" id="crieUmaContaForm">
+                    <input type="submit" value= "Crie uma conta." id="crieUma">
+                </form>
+            </div>
+            
         </div>
     </div>
 

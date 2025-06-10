@@ -12,7 +12,8 @@
             $stmt = $conexao->prepare("SELECT * FROM usuarios WHERE email = :email");
             $stmt->bindValue(":email", $email);
             $stmt->execute();
-            $userBd = $stmt->fetch();
+            $userBd = $stmt->fetch(); 
+            
             if($userBd && password_verify($senha, $userBd["senha"])){
                 $_SESSION["userEmail"] = $userBd["email"];
                 header("Location: securityArea.php");

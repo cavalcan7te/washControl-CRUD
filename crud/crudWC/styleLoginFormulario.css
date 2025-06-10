@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
 *{
     box-sizing: border-box;
     padding: 0;
@@ -90,6 +92,7 @@ body{
     width: 200px;
     background-color: #2D84C6;
     color: white;
+    cursor: pointer;
 }
 
 #user{
@@ -104,9 +107,22 @@ body{
     margin: 10px;
 }
 
+#email, #senha {
+    padding-left: 35px;
+}
 
+#botaoHeader{
+    display: flex;
+    padding-top: 10px;
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+#crieUma{
+    padding-left: 3px;
+    border: none;
+    color: #2D84C6;
+    background-color: white;
+    cursor: pointer;
+}
 
 .campoLogin{
     width: 350px;
@@ -138,7 +154,7 @@ body{
     opacity: 0.4;
 }
 
-.loginPadding {
+.cadPadding {
     padding-left: 35px;
 }
 

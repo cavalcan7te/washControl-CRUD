@@ -1,3 +1,16 @@
+<?php
+session_start();
+include_once "connection.php";
+
+// Verifica se o funcionário está logado e tem lava_jato_id
+if (!isset($_SESSION["lava_jato_id"])) {
+    header("Location: index.php");
+    exit();
+}
+
+$lava_jato_id = $_SESSION["lava_jato_id"];
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -6,7 +19,7 @@
     <title>Agendamentos</title>
 </head>
 <body>
-
+    
     <h2>Lista de Agendamentos</h2>
 
     <table border="1">
@@ -25,9 +38,8 @@
 
         <tbody>
             <?php
-                require_once "connection.php";
-
-                $stmt = $conexao->prepare("SELECT * FROM agendamentos");
+                $stmt = $conexao->prepare("SELECT * FROM agendamentos WHERE lava_jato_id = :lava_jato_id ORDER BY data_agendamento DESC");
+                $stmt->bindValue(":lava_jato_id", $lava_jato_id, PDO::PARAM_INT);
                 $stmt->execute();
 
                 while ($linha = $stmt->fetch(PDO::FETCH_OBJ)) {
@@ -35,7 +47,7 @@
                     echo "<td>{$linha->nome}</td>";
                     echo "<td>{$linha->telefone}</td>";
                     echo "<td>{$linha->placa}</td>";
-                    echo "<td>{$linha->modelo}</td>";
+                    echo "<td>{$linha->modelo_carro}</td>";
                     echo "<td>{$linha->data_agendamento}</td>";
                     echo "<td>{$linha->observacoes}</td>";
                     echo "<td>{$linha->servico}</td>";

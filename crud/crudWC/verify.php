@@ -1,7 +1,9 @@
-<?php
+<?
+    session_start();
+
     include_once "connection.php";
 
-    session_start();
+    
 
     $email = trim($_POST["email"]);
     $senha = trim($_POST["senha"]);
@@ -15,7 +17,7 @@
             $userBd = $stmt->fetch(); 
             
             if($userBd && password_verify($senha, $userBd["senha"])){
-                $_SESSION["userEmail"] = $userBd["email"];
+                $_SESSION["lava_jato_id"] = $userBd["lava_jato_id"];
                 header("Location: securityArea.php");
             }else{
                 $_SESSION["camposErrados"] = "E-mail ou senha incorretos.";

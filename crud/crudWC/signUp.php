@@ -24,14 +24,18 @@
       
        <div id="cadastro">
             <h1 id="tituloCadastro">Cadastro</h1>
-            <form action="create.php" method="post" id="formSR">
+        <form action="create.php" method="post" id="formSR">
             <div id="mensagemPhp">
                 <?php
-                session_start();
-                if (isset($_SESSION["campoVazio"])){
-                    echo $_SESSION["campoVazio"];
-                    session_destroy();
-                }
+                    session_start();
+                    if (isset($_SESSION["campoVazio"])) {
+                        echo $_SESSION["campoVazio"];
+                        unset($_SESSION["campoVazio"]);
+                    }
+                    if (isset($_SESSION["emailExistente"])) {
+                        echo $_SESSION["emailExistente"];
+                        unset($_SESSION["emailExistente"]);
+                    }
                 ?>
             </div>
 
@@ -58,7 +62,7 @@
                     <input placeholder="Senha" type="password" name="senha" id="senha" class="campoCadastro loginPadding">
                 </div>
             </div>
-
+            
             <input type="submit" value="Criar" class="campoCadastro" id="criarBotao">
         
         </form>

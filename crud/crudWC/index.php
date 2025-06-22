@@ -62,7 +62,7 @@
 
             <div id="botaoHeader">
                 <p>Novo aqui?</p>
-                <form action="signUp.php" id="crieUmaContaForm">
+                <form action="cadastroLavaJato.php" id="crieUmaContaForm">
                     <input type="submit" value= "Crie uma conta." id="crieUma">
                 </form>
             </div>

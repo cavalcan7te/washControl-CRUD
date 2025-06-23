@@ -9,7 +9,7 @@ if (isset($_POST["user"]) && isset($_POST["email"]) && isset($_POST["senha"])) {
     $lava_jato_id = $_SESSION["lava_jato_id"];
 
     if (!empty($user) && !empty($email) && !empty($senha) && !empty($lava_jato_id)) {
-        $stmt = $conexao->prepare("INSERT INTO usuarios (usuario, email, senha, lava_jato_id) 
+        $stmt = $conexao->prepare("INSERT INTO usuarios (usuario, email, ,senha lava_jato_id) 
                                    VALUES (:usuario, :email, :senha, :lava_jato_id)");
 
         $stmt->bindValue(":usuario", $user);

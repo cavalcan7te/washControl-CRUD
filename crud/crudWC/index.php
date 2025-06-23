@@ -25,7 +25,7 @@
             <h1 id="tituloLogin">Login</h1>
             <div id="mensagemPhp">
                 <?php
-                    session_start();
+    
                     if (isset($_SESSION["camposVazios"])){
                         echo $_SESSION["camposVazios"];
                         session_destroy();

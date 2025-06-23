@@ -9,18 +9,14 @@
 <body>
 
     <?php
-        session_start();
-        if(!$_SESSION["userEmail"]){
-            header("Location: index.php");
-            exit;
-        }
+        require_once "verificarConta.php";
     ?>
     
     <h1>WashControl</h1>
     <div id="menuLateral">
         <a href="securityArea.php">Dashboard</a>
-        <a href="agendar.php">Agendamentos</a>
-        <a href="pagamentos.php">Pagamentos</a>
+        <a href="readAgendamento.php">Agendamentos</a>
+        <a href="readPagamentos.php">Pagamentos</a>
         <a href="servicos.php">Serviços</a>
         <a href="clientes.php">Clientes</a>
     </div>

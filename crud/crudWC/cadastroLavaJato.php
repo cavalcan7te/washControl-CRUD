@@ -28,7 +28,7 @@
         <form action="createLavaJato.php" method="post" id="formSR">
             <div id="mensagemPhp">
                 <?php
-                    session_start();
+                    require_once "verificarConta.php";
                     if (isset($_SESSION["campoVazio"])){
                         echo $_SESSION["campoVazio"];
                         session_destroy();
@@ -61,6 +61,7 @@
             <form action="index.php" id="entreAgoraForm">
                 <input type="submit" value= "Entre agora." id="entreAgora">
             </form>
+            
         </div>
        
         </div>

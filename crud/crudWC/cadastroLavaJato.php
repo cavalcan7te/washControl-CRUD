@@ -28,10 +28,10 @@
         <form action="createLavaJato.php" method="post" id="formSR">
             <div id="mensagemPhp">
                 <?php
-                    require_once "verificarConta.php";
+                    session_start();
                     if (isset($_SESSION["campoVazio"])){
                         echo $_SESSION["campoVazio"];
-                        session_destroy();
+                        session_unset();
                     }
                 ?>
             </div>
@@ -40,14 +40,14 @@
                 <label for="lavajato">Nome da sua lava-jato:</label>
                 <div class="inputWrapper">
                     <img src="assets/carIcon.png" class="iconsCadastro">
-                    <input placeholder="Lava-jato" type="text" name="lavajato" id="lavajato" class="campoCadastro loginPadding">
+                    <input placeholder="Ex.: Lava-jato dois irmâos" type="text" name="lavajato" id="lavajato" class="campoCadastro loginPadding">
                 </div>
 
             <label for="endereco">Endereço:</label>
 
                 <div class="inputWrapper">
                     <img src="assets/carIcon.png" class="iconsCadastro">
-                    <input placeholder="Endereço" type="text" name="endereco" id="endereco" class="campoCadastro loginPadding">
+                    <input placeholder="Ex.: Russas (CE)" type="text" name="endereco" id="endereco" class="campoCadastro loginPadding">
                 </div>
 
             </div>

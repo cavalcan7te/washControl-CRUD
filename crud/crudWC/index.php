@@ -25,15 +25,19 @@
             <h1 id="tituloLogin">Login</h1>
             <div id="mensagemPhp">
                 <?php
-    
+                    if (!isset($agendamento_id)) {
+                        $agendamento_id = null;
+                    }
+
+                    session_start();
                     if (isset($_SESSION["camposVazios"])){
                         echo $_SESSION["camposVazios"];
-                        session_destroy();
+                        session_unset();
                     } 
                 
                     if (isset($_SESSION["camposErrados"])){
                         echo $_SESSION["camposErrados"];
-                        session_destroy();
+                        session_unset();
                     }
                 ?>
             </div>
@@ -43,7 +47,7 @@
                     <label for="email">E-mail:</label>
                     <div class="inputWrapper">
                         <img src="assets/gmail.webp" alt="Ícone de email" class="iconsLogin">
-                        <input placeholder="Email" type="email" name="email" id="email" class="campoLogin loginPadding">
+                        <input placeholder="Ex.: usuario@gmail.com" type="email" name="email" id="email" class="campoLogin loginPadding">
                     </div>
                 </div>
 
@@ -53,7 +57,7 @@
                     <label for="senha">Senha:</label>
                     <div class="inputWrapper">
                         <img src="assets/lock.png" alt="Ícone de senha" class="iconsLogin">
-                        <input placeholder="Senha" type="password" name="senha" id="senha" class="campoLogin loginPadding">
+                        <input placeholder="Ex.: 1234" type="password" name="senha" id="senha" class="campoLogin loginPadding">
                     </div>
                     
                 </div>
@@ -62,9 +66,7 @@
 
             <div id="botaoHeader">
                 <p>Novo aqui?</p>
-                <form action="cadastroLavaJato.php" id="crieUmaContaForm">
-                    <input type="submit" value= "Crie uma conta." id="crieUma">
-                </form>
+                <a href="cadastroLavaJato.php" id="crieUma" >Crie uma conta.</a>
             </div>
             
         </div>

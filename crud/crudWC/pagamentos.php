@@ -1,10 +1,7 @@
 <?php
 require_once "verificarConta.php";
 $agendamento_id = $_POST["agendamento_id"] ?? null;
-
-
-
-
+var_dump($_POST);
 ?>
 
 

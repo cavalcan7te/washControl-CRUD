@@ -1,6 +1,7 @@
 <?php
 require_once "verificarConta.php";
 include_once "connection.php";
+// $agendamento_id = $_POST["agendamento_id"] ?? "sim";
 
 
 ?>
@@ -26,22 +27,17 @@ include_once "connection.php";
         <table border="1">
             <thead>
                 <tr>
-                    <th>Nome</th>
-                    <th>Telefone</th>
-                    <th>Placa</th>
-                    <th>Modelo do carro</th>
-                    <th>Data do agendamento</th>
-                    <th>Observações</th>
-                    <th>Serviço</th>
-                    <th>Status</th>
+                    <th>Valor pago</th>
+                    <th>Forma de pagamento</th>
+                    <th>Data do pagamento</th>
+
                 </tr>
             </thead>
-
             <tbody>
                 <?php
-                    $stmt = $conexao->prepare("SELECT * FROM pagamentos WHERE lava_jato_id = :lava_jato_id ORDER BY data_agendamento DESC");
-                    $stmt->bindValue(":agendamento_id", $agendamento_id, PDO::PARAM_INT);
+                    $stmt = $conexao->prepare("SELECT * FROM pagamentos ORDER BY data_pagamento DESC");
                     $stmt->execute();
+
 
                     while ($linha = $stmt->fetch(PDO::FETCH_OBJ)) {
                         echo "<tr>";
@@ -60,7 +56,6 @@ include_once "connection.php";
                         </td>";
 
                         echo "</tr>";
-                        
                     }
                 ?>
             </tbody>

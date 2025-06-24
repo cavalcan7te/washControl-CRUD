@@ -113,6 +113,7 @@ body{
 #entreAgora{
     padding-left: 3px;
     border: none;
+    text-decoration: none;
     color: #2D84C6;
     background-color: white;
     cursor: pointer;

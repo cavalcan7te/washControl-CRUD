@@ -30,11 +30,11 @@
                     session_start();
                     if (isset($_SESSION["campoVazio"])) {
                         echo $_SESSION["campoVazio"];
-                        unset($_SESSION["campoVazio"]);
+                        session_unset();
                     }
-                    if (isset($_SESSION["emailExistente"])) {
-                        echo $_SESSION["emailExistente"];
-                        unset($_SESSION["emailExistente"]);
+                    if (isset($_SESSION["userEmail"])) {
+                        echo $_SESSION["userEmail"];
+                        session_destroy();
                     }
                 ?>
             </div>
@@ -43,7 +43,7 @@
                 <label for="user">Nome de usuário:</label>
                 <div class="inputWrapper">
                     <img src="assets/profile.png" alt="Ícone de usuário" class="iconsCadastro">
-                    <input placeholder="Nome de usuário" type="text" name="user" id="user" class="campoCadastro loginPadding">
+                    <input placeholder="Seu nome" type="text" name="user" id="user" class="campoCadastro loginPadding">
                 </div>
             </div>
 
@@ -51,7 +51,7 @@
                 <label for="email">E-mail:</label>
                 <div class="inputWrapper">
                     <img src="assets/gmail.webp" alt="Ícone de email" class="iconsCadastro">
-                    <input placeholder="Email" type="email" name="email" id="email" class="campoCadastro loginPadding">
+                    <input placeholder="Ex.: usuario@gmail.com" type="email" name="email" id="email" class="campoCadastro loginPadding">
                 </div>
             </div>
 
@@ -59,7 +59,7 @@
                 <label for="senha">Senha:</label>
                 <div class="inputWrapper">
                     <img src="assets/lock.png" alt="Ícone de senha" class="iconsCadastro">
-                    <input placeholder="Senha" type="password" name="senha" id="senha" class="campoCadastro loginPadding">
+                    <input placeholder="Ex.: 1234" type="password" name="senha" id="senha" class="campoCadastro loginPadding">
                 </div>
             </div>
             
@@ -69,11 +69,7 @@
         
         <div id="botaoHeader">
             <p>Você já faz parte?</p>
-            <form action="index.php" id="entreAgoraForm">
-                <input type="submit" value= "Entre agora." id="entreAgora">
-            </form>
-        </div>
-       
+            <a href="index.php" id="entreAgora">Entre agora.</a>
         </div>
         
     </div>

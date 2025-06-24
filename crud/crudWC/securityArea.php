@@ -14,19 +14,22 @@
     
     <h1>WashControl</h1>
     <div id="menuLateral">
-        <a href="securityArea.php">Dashboard</a>
-        <a href="readAgendamento.php">Agendamentos</a>
-        <a href="readPagamentos.php">Pagamentos</a>
-        <a href="servicos.php">Serviços</a>
-        <a href="clientes.php">Clientes</a>
+        <a href="securityArea.php" class="tagAmenu tagBorder">Dashboard</a>
+        <a href="readAgendamento.php" class="tagAmenu tagBorder">Agendamentos</a>
+        <a href="readPagamentos.php" class="tagAmenu tagBorder">Pagamentos</a>
+        <div id="sairDiv">
+            <a href="logOut.php" id="sairMenu">
+                Sair
+                <img src="assets/sair.png" alt="" id="sairImg">
+            </a>
+
+        </div>
+        
+
     </div>
 
 
 
-
-    <form action="logOut.php" method="post">
-        <input type="submit" value="Sair">
-    </form>
 
     
 </body>
